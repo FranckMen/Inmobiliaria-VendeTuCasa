@@ -1,0 +1,57 @@
+<!DOCTYPE html>  
+<html>  
+<head>  
+<meta charset="ISO-8859-1"> 
+ <meta name = "google-signin-client_id" content = "258885183212-bbiv4rl2r6mb99l7c8ged077jlmtvcn3.apps.googleusercontent.com">
+<script src="https://apis.google.com/js/platform.js" async defer></script>
+ <title>VendeTuCasa</title>  
+
+    <link rel="stylesheet" href="css/estilos.css">    
+</head>  
+<style>
+    #menu{
+        text-align: right;
+        color: black;
+        background-color:lavender; 
+    }
+</style>
+<body>  
+    <img src='img/logo.jpg' title='VendeTuCasa.com' id="logo"><br>'
+    <div id="menu">}
+        
+       
+    <a href="index.jsp">Inicio</a> |
+    <a href="login2.html">Mi cuenta</a> |     
+    <a href="">Ver propiedades</a> | 
+    <a href="nosotros.jsp">Acerca de nosotros</a> |
+    <a href="#">Contácto</a> |
+    <a href="login.html">Acceso Administrador</a> 
+    </div>
+    <hr> 
+<center><div id="tablaIni">  
+        <h1>Iniciar Sesión</h1>
+        <form action="LoginServlet2" method="post" accept-charset="ISO-8859-1">
+                
+        Email:<input type="text" name="email"/><br/><br/>
+        
+        Contraseña:<input type="password" name="contrasena"/><br/><br/>  
+        <input type="submit" value="Iniciar Sesión"/>
+        </div> </center>
+        <div class="g-signin2" data-onsuccess="onSignIn"></div>
+        
+        <script>function onSignIn(googleUser) {
+  var profile = googleUser.getBasicProfile();
+  console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
+  console.log('Name: ' + profile.getName());
+  console.log('Image URL: ' + profile.getImageUrl());
+  console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+</script>
+ </script>
+  
+        
+        </form>  
+        <br>
+        <hr>
+        <h3><a href="CrearCuentaNueva.jsp">Crear cuenta nueva</a></h3>
+    </body>
+</html>
